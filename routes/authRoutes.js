@@ -6,6 +6,7 @@ const router = Router();
 
 router.post('/login', (req, res, next) => {
     try {
+        const data = AuthService.login(req.body);
         // TODO: Implement login action
         res.data = data;
     } catch (err) {
@@ -15,4 +16,4 @@ router.post('/login', (req, res, next) => {
     }
 }, responseMiddleware);
 
-module.exports = router;
+module.exports = router; 
