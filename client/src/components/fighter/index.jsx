@@ -32,7 +32,7 @@ export default function Fighter({ fightersList, onFighterSelect, selectedFighter
                     value={fighter}
                     onChange={handleChange}
                 >
-                    {fightersList.map((it, index) => {
+                    {Array(fightersList).map((it, index) => {
                         return (
                             <MenuItem key={`${index}`} value={it}>{it.name}</MenuItem>
                         );
@@ -42,6 +42,7 @@ export default function Fighter({ fightersList, onFighterSelect, selectedFighter
                     ? <div>
                         <div>Name: {selectedFighter.name}</div>
                         <div>Power: {selectedFighter.power}</div>
+                        <div>Defense: {selectedFighter.defense}</div>
                         <div>Health: {selectedFighter.health}</div>
                     </div>
                     : null
