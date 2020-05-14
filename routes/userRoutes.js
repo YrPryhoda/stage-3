@@ -6,7 +6,7 @@ const { responseMiddleware } = require('../middlewares/response.middleware');
 const router = Router();
 
 router.get('/', (req, res) => {
-
+console.log('запрос /api/users')
 })
 router.get('/:id', (req, res) => {
 

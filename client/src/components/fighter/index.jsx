@@ -17,12 +17,11 @@ export default function Fighter({ fightersList, onFighterSelect, selectedFighter
     const [fighter, setFighter] = useState();
 
     const handleChange = (event) => {
-        debugger;
         setFighter(event.target.value);
         onFighterSelect(event.target.value);
     };
 
-    return (
+    return !fightersList.length ? (<p className='center'>Список пуст</p>) : (
         <div>
             <FormControl className={classes.formControl}>
                 <InputLabel id="simple-select-label">Select Fighter</InputLabel>
@@ -30,9 +29,9 @@ export default function Fighter({ fightersList, onFighterSelect, selectedFighter
                     labelId="simple-select-label"
                     id="simple-select"
                     value={fighter}
-                    onChange={handleChange}
-                >
-                    {Array(fightersList).map((it, index) => {
+                    onChange={handleChange} 
+                >                    
+                    {fightersList.map((it, index) => {
                         return (
                             <MenuItem key={`${index}`} value={it}>{it.name}</MenuItem>
                         );

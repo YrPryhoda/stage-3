@@ -9,6 +9,9 @@ const createFighterValid = async (req, res, next) => {
     await check('power', "Укажите силу от 1 до 100")
         .isInt({ min: 1, max: 100 })
         .run(req);
+    await check('defense', "Укажите уровень защиты от 1 до 10")
+        .isInt({ min: 1, max: 10 })
+        .run(req);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         let resMsg = '';

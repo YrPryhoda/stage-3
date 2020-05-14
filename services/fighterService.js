@@ -13,18 +13,17 @@ class FighterService {
     }
     findAll() {
         const result = [];
-        /* const items = FighterRepository
+        const items = FighterRepository
             .getAll()
-            .forEach((el) => {
-                result.push({
-                    name: el.name,
-                    h: el.health,
-                    power: el.power
-                })
-
-            }) */
-        console.log(result);
-        if (!items) {
+            .forEach(el => {
+                const fighterObj = {};
+                for (let key in el) {
+                    if (key !== 'createdAt')
+                        fighterObj[key] = el[key];
+                }
+                result.push(fighterObj)
+            })
+        if (!result) {
             return null;
         }
         return result;

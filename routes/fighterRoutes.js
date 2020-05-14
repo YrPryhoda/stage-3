@@ -7,8 +7,8 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   try {
-    await FighterService.findAll();
-    res.status(200).json('Боец успешно создан!')
+    const fightersList = await FighterService.findAll();
+    res.status(200).json(fightersList)
   } catch (error) {
     res.status(400).json({
       error: true,
@@ -17,13 +17,15 @@ router.get('/', async (req, res) => {
   }
 
 })
+
 router.get('/:id', (req, res) => {
 
 })
+
 router.post('/', createFighterValid, async (req, res) => {
   try {
-    await FighterService.create(req.body);
-    res.status(200).json('Боец успешно создан!')
+    const result = await FighterService.create(req.body);
+    res.status(200).json(result)
   } catch (error) {
     res.status(400).json({
       error: true,
@@ -32,9 +34,11 @@ router.post('/', createFighterValid, async (req, res) => {
   }
 
 })
+
 router.put('/:id', (req, res) => {
 
 })
+
 router.delete('/:id', (req, res) => {
 
 })
