@@ -13,7 +13,7 @@ routes(app);
 
 app.use('/', express.static('./client/build'));
 
-const port = 3050;
+const port = process.env.PORT || 3050;
 app.listen(port, () => {
   console.log(`running on port ${port} !`)
 });
