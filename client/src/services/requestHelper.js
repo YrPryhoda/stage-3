@@ -1,4 +1,5 @@
-const apiUrl = 'http://localhost:3050/api';
+//const apiUrl = 'http://localhost:3050/api';
+const apiUrl = '/api';
 
 export const get = async (entityName, id = '') => {
     return await makeRequest(`${entityName}/${id}`, 'GET');
@@ -21,13 +22,13 @@ const makeRequest = async (path, method, body) => {
         const url = `${apiUrl}/${path}`
         const res = await fetch(url, {
             method,
-            body: body ? JSON.stringify(body) : undefined ,
+            body: body ? JSON.stringify(body) : undefined,
             headers: { "Content-Type": "application/json" }
         });
 
         const dataObj = await res.json();
 
-        if(res.ok) {
+        if (res.ok) {
             return dataObj;
         }
 

@@ -8,4 +8,4 @@ export const getFighters = async () => {
 
 export const createFighter = async (body) => {
     return await post(entity, body);
-}
+} 

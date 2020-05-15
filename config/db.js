@@ -8,7 +8,7 @@ const adapter = new FileSync(dbPath);
 const dbAdapter = low(adapter);
 
 const defaultDb = { users: [], fighters: [], fights: [] };
-// add () to write
+// removed () from write method
 dbAdapter.defaults(defaultDb).write;
 
 exports.dbAdapter = dbAdapter;

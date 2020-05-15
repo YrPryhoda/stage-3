@@ -3,6 +3,7 @@ const { fighter } = require('../models/fighter');
 
 class FighterService {
     // TODO: Implement methods to work with fighters
+    //done
     create(fighterData) {
         const newFighter = { ...fighter, ...fighterData };
         const item = FighterRepository.create(newFighter);
@@ -12,22 +13,34 @@ class FighterService {
         return item;
     }
     findAll() {
-        const result = [];
-        const items = FighterRepository
-            .getAll()
-            .forEach(el => {
-                const fighterObj = {};
-                for (let key in el) {
-                    if (key !== 'createdAt')
-                        fighterObj[key] = el[key];
-                }
-                result.push(fighterObj)
-            })
-        if (!result) {
+        const items = FighterRepository.getAll();
+        if (!items) {
             return null;
         }
-        return result;
+        return items;
+    }
+    findById(id) {
+        const item = FighterRepository.getOne({ id });
+        if (!item) {
+            return null;
+        }
+        return item;
+    }
+    update(id, fighter) {
+        const updatedFighter = FighterRepository.update(id, fighter);
+        if (!updatedFighter) {
+            return null;
+        }
+        return updatedFighter;
+    }
+    delete(id) {
+        const item = FighterRepository.delete(id);
+        if (!item) {
+            return null;
+        }
+        return item;
     }
 }
+
 
 module.exports = new FighterService();

@@ -24,3 +24,12 @@
 p.center {
     text-align: center;
 }
+
+.preview-warning {
+    height: 1.2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(116, 7, 7);
+    text-transform: uppercase;
+    text-align: center;
+}

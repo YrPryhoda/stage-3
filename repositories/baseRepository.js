@@ -33,7 +33,7 @@ class BaseRepository {
     }
 
     delete(id) {
-        return this.dbContext.remove({ id }).write();
+        return this.dbContext.remove({ id: id }).write();
     }
 }
 
