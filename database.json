@@ -1,32 +1,24 @@
 {
   "users": [
     {
-      "email": "adminko1990@gmail.com",
-      "password": "adminko",
-      "firstName": "adminko",
-      "lastName": "adminko",
-      "phoneNumber": "+380201002324",
-      "id": "a65d8135-a233-4ffe-b935-fcf03193e212",
-      "createdAt": "2020-05-14T11:44:48.177Z"
-    },
-    {
-      "email": "a@gmail.com",
-      "password": "222",
-      "firstName": "bob",
-      "lastName": "Dilan",
-      "phoneNumber": "+380977665111",
-      "id": "bda47f7d-1997-47a0-8e27-9e76dd66c495",
-      "createdAt": "2020-05-14T13:19:55.273Z",
-      "updatedAt": "2020-05-15T13:29:25.491Z"
-    },
-    {
-      "email": "yr@gmail.com",
-      "password": "qqq",
-      "firstName": "yr",
-      "lastName": "admin",
-      "phoneNumber": "+380959493922",
       "id": "95a88fdc-fd5f-4f49-a992-d1df79a6c8e9",
-      "createdAt": "2020-05-15T13:52:58.704Z"
+      "createdAt": "2020-05-15T13:52:58.704Z",
+      "updatedAt": "2020-05-15T15:24:26.426Z",
+      "email": "welcome@gmail.com",
+      "password": "qqq",
+      "firstName": "admin",
+      "lastName": "noname",
+      "phoneNumber": "+380502929233"
+    },
+    {
+      "firstName": "first",
+      "lastName": "second",
+      "email": "email2@gmail.com",
+      "phoneNumber": "+380503040200",
+      "password": "qwerty",
+      "id": "ac8c99c5-fb51-4d19-bd7d-a4410c82b583",
+      "createdAt": "2020-05-15T17:12:45.727Z",
+      "updatedAt": "2020-05-15T19:35:55.001Z"
     }
   ],
   "fighters": [

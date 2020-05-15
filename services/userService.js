@@ -12,6 +12,7 @@ class UserService {
             if (!item) {
                 throw Error('Server error');
             }
+            delete item.id;
             return item;
         } else {
             throw Error('Email already excists');
@@ -27,15 +28,26 @@ class UserService {
     search(search) {
         const item = UserRepository.getOne(search);
         if (!item) {
-            throw Error('No such found');
+            throw Error('No such user found');
         }
+        delete item.id;
         return item;
     }
     update(id, user) {
-        const updatedUser = UserRepository.update(id, user);
-        if(!updatedUser) {
+        const item = UserRepository.getOne({ id });
+        if (!item) {
+            throw Error('User not found');
+        }
+        let fieldToUpdate = {}
+        for (let param in user) {
+            !!user[param] && (fieldToUpdate[param] = user[param])
+        }
+        console.log(fieldToUpdate);
+        const updatedUser = UserRepository.update(id, fieldToUpdate);
+        if (!updatedUser) {
             throw Error('Can not update user');
         }
+        delete updatedUser.id;
         return updatedUser;
     }
     delete(id) {

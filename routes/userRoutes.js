@@ -20,7 +20,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => {
   try {
-    const user = await UserService.search({id: req.params.id});
+    const user = await UserService.search({ id: req.params.id });
     res.data = user;
   } catch (error) {
     res.err = error;
@@ -41,8 +41,12 @@ router.post('/', createUserValid, async (req, res, next) => {
 }, responseMiddleware);
 
 router.put('/:id', updateUserValid, async (req, res, next) => {
+  const { email, password, firstName, lastName, phoneNumber } = req.body;
   try {
-    const updatedUser = await UserService.update(req.params.id, req.body);
+    const updatedUser = await UserService
+      .update(req.params.id, {
+        email, password, firstName, lastName, phoneNumber
+      });
     res.data = updatedUser;
   } catch (error) {
     res.err = error;

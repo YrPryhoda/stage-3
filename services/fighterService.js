@@ -10,6 +10,7 @@ class FighterService {
         if (!item) {
             return null;
         }
+        delete item.id;
         return item;
     }
     findAll() {
@@ -31,6 +32,7 @@ class FighterService {
         if (!updatedFighter) {
             return null;
         }
+        delete updatedFighter.id;
         return updatedFighter;
     }
     delete(id) {

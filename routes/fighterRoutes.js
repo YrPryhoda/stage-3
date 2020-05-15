@@ -8,7 +8,7 @@ const router = Router();
 router.get('/', async (req, res, next) => {
   // TODO: Implement route controllers for fighter
   // done
-  try {
+  try { 
     const fightersList = await FighterService.findAll();
     res.data = fightersList;
   } catch (error) {
