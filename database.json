@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "email": "adminko1990@gmail.com",
+      "password": "adminko",
+      "firstName": "adminko",
+      "lastName": "adminko",
+      "phoneNumber": "+380201002324",
+      "id": "a65d8135-a233-4ffe-b935-fcf03193e212",
+      "createdAt": "2020-05-14T11:44:48.177Z"
+    },
+    {
+      "email": "a@gmail.com",
+      "password": "222",
+      "firstName": "bob",
+      "lastName": "Dilan",
+      "phoneNumber": "+380977665111",
+      "id": "bda47f7d-1997-47a0-8e27-9e76dd66c495",
+      "createdAt": "2020-05-14T13:19:55.273Z",
+      "updatedAt": "2020-05-15T13:29:25.491Z"
+    },
+    {
+      "email": "yr@gmail.com",
+      "password": "qqq",
+      "firstName": "yr",
+      "lastName": "admin",
+      "phoneNumber": "+380959493922",
+      "id": "95a88fdc-fd5f-4f49-a992-d1df79a6c8e9",
+      "createdAt": "2020-05-15T13:52:58.704Z"
+    }
+  ],
+  "fighters": [
+    {
+      "id": "07c1e76f-86e7-45c5-a1b5-a0779e695646",
+      "name": "Zeus",
+      "health": 100,
+      "power": 100,
+      "defense": 10,
+      "createdAt": "2020-05-14T07:24:40.779Z",
+      "updatedAt": "2020-05-15T13:37:00.393Z"
+    },
+    {
+      "id": "5870cc1d-c06f-46d3-b54e-7644b73039d1",
+      "name": "Max Pain",
+      "health": 100,
+      "power": 79,
+      "defense": 6,
+      "createdAt": "2020-05-14T17:32:27.479Z"
+    },
+    {
+      "id": "6284b2c6-e773-47e2-829f-4397ec950e3b",
+      "name": "Samsung",
+      "health": 100,
+      "power": 54,
+      "defense": 4,
+      "createdAt": "2020-05-15T13:59:58.623Z"
+    }
+  ],
+  "fights": [
+    {
+      "player": "test@gmail.com",
+      "fightStartedAt": "2020-05-15T13:40:05.852Z",
+      "fighter1": "Zeus",
+      "fighter2": "Max Pain",
+      "logging": [
+        "Fight started",
+        "Zeus makes damage, Max Pain 100% HP left",
+        "Max Pain makes damage, Zeus 91.97722068349987% HP left",
+        "Zeus makes damage, Max Pain 87.04133554741315% HP left",
+        "Zeus makes damage, Max Pain 57.041335547413155% HP left",
+        "Zeus makes damage, Max Pain 33.746851958027115% HP left",
+        "Max Pain makes damage, Zeus 68.27722068349986% HP left",
+        "Max Pain makes damage, Zeus 36.737875751912576% HP left",
+        "Max Pain makes damage, Zeus 10.362950434524507% HP left",
+        "Zeus makes damage, Max Pain 19.831877183329482% HP left",
+        "Zeus has won this battle"
+      ],
+      "id": "e05311c9-a12d-41cc-b6d1-935734b0835d",
+      "createdAt": "2020-05-15T13:40:20.031Z"
+    },
+    {
+      "player": "yr@gmail.com",
+      "fightStartedAt": "2020-05-15T14:00:07.028Z",
+      "fighter1": "Samsung",
+      "fighter2": "Zeus",
+      "logging": [
+        "Fight started",
+        "Samsung makes damage, Zeus 100% HP left",
+        "Samsung makes damage, Zeus 93.80734834726366% HP left",
+        "Samsung makes damage, Zeus 88.10880473971478% HP left",
+        "Samsung makes damage, Zeus 84.99284171569406% HP left",
+        "Samsung makes damage, Zeus 59.99835614842718% HP left",
+        "Samsung makes damage, Zeus 38.32093400283625% HP left",
+        "Zeus makes damage, Samsung 64.96027511693879% HP left",
+        "Zeus makes damage, Samsung 29.06057623378537% HP left",
+        "Samsung makes damage, Zeus 11.320934002836253% HP left",
+        "Zeus has won this battle"
+      ],
+      "id": "bca2710b-c618-42e2-8a82-8f7d637584f8",
+      "createdAt": "2020-05-15T14:00:14.315Z"
+    }
+  ]
+}
